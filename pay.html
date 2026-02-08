@@ -2,40 +2,96 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Payment</title>
+<title>Payment instructions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body{font-family:Arial;background:#f4f6f8;text-align:center;padding:40px}
-.box{background:white;max-width:600px;margin:auto;padding:30px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
-.code{background:#eee;padding:10px;border-radius:6px;margin:10px 0;font-family:monospace}
-button{background:#2d72ff;color:white;border:none;padding:15px 25px;border-radius:6px;cursor:pointer}
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    margin:0;
+    text-align:center;
+}
+.box{
+    background:white;
+    max-width:620px;
+    margin:60px auto;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.1);
+}
+h2{margin-top:0;color:#2a2a2a;}
+.amount{
+    font-size:28px;
+    font-weight:bold;
+    color:#2d72ff;
+    margin:15px 0 25px;
+}
+.code{
+    background:#eef1f5;
+    padding:12px;
+    border-radius:6px;
+    margin:10px 0 20px;
+    font-family:monospace;
+    word-break:break-all;
+}
+.info{
+    color:#555;
+    font-size:14px;
+    margin-top:25px;
+    line-height:1.5;
+}
+.notice{
+    margin-top:20px;
+    font-size:15px;
+}
 </style>
 </head>
 
 <body>
+
 <div class="box">
+
 <h2>Payment instructions</h2>
 
-<p>Amount: <b id="amount">...</b></p>
+<p>Total amount:</p>
+<div class="amount" id="amount">...</div>
 
-<p>Recipient:</p>
+<p>Recipient</p>
 <div class="code">YOUR NAME</div>
 
-<p>IBAN:</p>
+<p>IBAN</p>
 <div class="code">LT00 0000 0000 0000 0000</div>
 
-<p>Reference:</p>
+<p>Payment reference</p>
 <div class="code" id="ref">order</div>
 
-<p>After payment you will receive confirmation by email.</p>
+<div class="notice">
+SEPA bank transfer (EU only)
+</div>
+
+<div class="info">
+Processing usually takes 10–60 minutes after payment.<br>
+After receiving the transfer you will get confirmation by email.
+</div>
+
 </div>
 
 <script>
 const params = new URLSearchParams(window.location.search);
-document.getElementById("amount").textContent = params.get("amount") || "";
-document.getElementById("ref").textContent = params.get("product") || "";
+const product = params.get("product");
+const amount = params.get("amount");
+
+document.getElementById("amount").textContent = amount || "";
+
+let text="Order";
+if(product==="extended20") text="Order Extended 20";
+if(product==="extended40") text="Order Extended 40";
+if(product==="standard20") text="Order Standard 20";
+if(product==="daily30") text="Order Daily 30";
+
+document.getElementById("ref").textContent = text;
 </script>
 
 </body>
 </html>
-
