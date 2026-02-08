@@ -2,57 +2,77 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Baltic Service</title>
+<title>Private Men Health Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
     font-family: Arial, sans-serif;
-    background:#f4f6f8;
     margin:0;
-    text-align:center;
+    background:#f4f6f8;
+    color:#2a2a2a;
 }
 
 header{
-    background:#2d72ff;
+    background:#1f2a44;
     color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+header h1{margin:0;font-size:32px;}
+header p{margin-top:10px;color:#cfd6e6;}
+
+.container{
+    max-width:1000px;
+    margin:auto;
     padding:40px 20px;
 }
 
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
 .card{
     background:white;
     padding:25px;
-    margin:20px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.1);
+    text-align:center;
 }
 
-.card h2{
-    color:#2a2a2a;
-}
+.card h2{margin-top:0;}
 
-.card p{
-    color:#555;
+.card a{
+    text-decoration:none;
 }
 
 button{
+    margin-top:15px;
     background:#2d72ff;
     color:white;
     border:none;
-    padding:15px 25px;
-    font-size:18px;
+    padding:14px 22px;
     border-radius:6px;
     cursor:pointer;
+    font-size:16px;
+}
+button:hover{background:#1a5be0;}
+
+.info{
+    margin-top:50px;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
-button:hover{
-    background:#1a5be0;
+footer{
+    text-align:center;
+    color:#777;
+    padding:30px 0;
+    font-size:14px;
 }
 </style>
 </head>
@@ -60,38 +80,48 @@ button:hover{
 <body>
 
 <header>
-<h1>Private Request Service</h1>
-<p>Discreet processing within EU</p>
+<h1>Discreet Men Health Service</h1>
+<p>Private processing • EU delivery • Secure communication</p>
 </header>
 
 <div class="container">
 
+<div class="cards">
+
 <div class="card">
-<h2>Standard Option</h2>
-<p>Short term support</p>
-<p>For occasional use</p>
+<h2>Standard option</h2>
+<p>Occasional support</p>
+<a href="extended.html"><button>View options</button></a>
 </div>
 
-<a href="extended.html" style="text-decoration:none;">
 <div class="card">
-<h2>Extended Option</h2>
+<h2>Extended option</h2>
 <p>Long duration effect</p>
-<p>Most popular choice</p>
+<a href="extended.html"><button>View options</button></a>
 </div>
-</a>
+
 <div class="card">
-<h2>Daily Option</h2>
+<h2>Daily option</h2>
 <p>Continuous support</p>
-<p>Lower daily amount</p>
+<a href="extended.html"><button>View options</button></a>
 </div>
 
-<br><br>
+</div>
 
-<a href="https://tally.so/r/xxxxxx">
-<button>Request availability & price</button>
-</a>
+<div class="info">
+<h3>How it works</h3>
+<p>
+1. Choose suitable option<br>
+2. Receive payment details<br>
+3. Processing & dispatch
+</p>
+</div>
 
 </div>
+
+<footer>
+Private service within EU
+</footer>
 
 </body>
 </html>
