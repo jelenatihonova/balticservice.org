@@ -47,22 +47,18 @@ button:hover{background:#1a5be0;}
 <h2>Enter your email to receive payment instructions</h2>
 
 <form action="https://formsubmit.co/jelena.tihonova@proton.me" method="POST">
-    <input type="hidden" name="product" id="productField">
+
     <input type="email" name="email" placeholder="Your email" required>
+
+    <input type="hidden" name="product" id="productField">
+    <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_next" id="nextPage">
 
-    <!-- защита от ботов -->
-    <input type="text" name="_honey" style="display:none">
-
-    <!-- без капчи -->
-    <input type="hidden" name="_captcha" value="false">
-
-    <!-- тема письма -->
-    <input type="hidden" name="_subject" value="New order request">
-
     <button type="submit">Send request</button>
-    
+
 </form>
+</div>
+
 <script>
 const params = new URLSearchParams(window.location.search);
 const product = params.get('product');
@@ -71,17 +67,9 @@ let amount="";
 if(product==="extended20") amount="45€";
 if(product==="extended40") amount="75€";
 
+document.getElementById("productField").value = product;
 document.getElementById("nextPage").value =
 "/pay.html?product="+product+"&amount="+amount;
-</script>
-
-</div>
-<script>
-const params = new URLSearchParams(window.location.search);
-const product = params.get('product');
-if(product){
-    document.getElementById('productField').value = product;
-}
 </script>
 
 </body>
