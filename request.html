@@ -63,6 +63,13 @@ button:hover{background:#1a5be0;}
 </form>
 
 </div>
+<script>
+const params = new URLSearchParams(window.location.search);
+const product = params.get('product');
+if(product){
+    document.getElementById('productField').value = product;
+}
+</script>
 
 </body>
 </html>
