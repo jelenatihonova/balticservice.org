@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{font-family:Arial;background:#f4f6f8;text-align:center;padding:40px}
+.box{background:white;max-width:600px;margin:auto;padding:30px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+.code{background:#eee;padding:10px;border-radius:6px;margin:10px 0;font-family:monospace}
+button{background:#2d72ff;color:white;border:none;padding:15px 25px;border-radius:6px;cursor:pointer}
+</style>
+</head>
+
+<body>
+<div class="box">
+<h2>Payment instructions</h2>
+
+<p>Amount: <b id="amount">...</b></p>
+
+<p>Recipient:</p>
+<div class="code">YOUR NAME</div>
+
+<p>IBAN:</p>
+<div class="code">LT00 0000 0000 0000 0000</div>
+
+<p>Reference:</p>
+<div class="code" id="ref">order</div>
+
+<p>After payment you will receive confirmation by email.</p>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("amount").textContent = params.get("amount") || "";
+document.getElementById("ref").textContent = params.get("product") || "";
+</script>
+
+</body>
+</html>
 
