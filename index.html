@@ -4,24 +4,44 @@
 <meta charset="UTF-8">
 <title>Baltic Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body {
+body{
     font-family: Arial, sans-serif;
     background:#f4f6f8;
+    margin:0;
     text-align:center;
-    padding:40px;
 }
-.box {
-    max-width:600px;
+
+header{
+    background:#2d72ff;
+    color:white;
+    padding:40px 20px;
+}
+
+.container{
+    max-width:900px;
     margin:auto;
+    padding:40px 20px;
+}
+
+.card{
     background:white;
-    padding:30px;
+    padding:25px;
+    margin:20px;
     border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
-h1 {color:#2a2a2a;}
-p {color:#555;}
-button {
+
+.card h2{
+    color:#2a2a2a;
+}
+
+.card p{
+    color:#555;
+}
+
+button{
     background:#2d72ff;
     color:white;
     border:none;
@@ -30,19 +50,47 @@ button {
     border-radius:6px;
     cursor:pointer;
 }
-button:hover {background:#1a5be0;}
+
+button:hover{
+    background:#1a5be0;
+}
 </style>
 </head>
+
 <body>
-<div class="box">
-<h1>Online Request</h1>
-<p>Private service within EU</p>
-<p>Discreet processing</p>
-<br>
-<a href="#">
-<button>Request Order</button>
-</a>
+
+<header>
+<h1>Private Request Service</h1>
+<p>Discreet processing within EU</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Standard Option</h2>
+<p>Short term support</p>
+<p>For occasional use</p>
 </div>
+
+<div class="card">
+<h2>Extended Option</h2>
+<p>Long duration effect</p>
+<p>Most popular choice</p>
+</div>
+
+<div class="card">
+<h2>Daily Option</h2>
+<p>Continuous support</p>
+<p>Lower daily amount</p>
+</div>
+
+<br><br>
+
+<a href="#">
+<button>Request availability & price</button>
+</a>
+
+</div>
+
 </body>
 </html>
-
