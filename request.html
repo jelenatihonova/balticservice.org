@@ -49,6 +49,7 @@ button:hover{background:#1a5be0;}
 <form action="https://formsubmit.co/jelena.tihonova@proton.me" method="POST">
     <input type="hidden" name="product" id="productField">
     <input type="email" name="email" placeholder="Your email" required>
+    <input type="hidden" name="_next" id="nextPage">
 
     <!-- защита от ботов -->
     <input type="text" name="_honey" style="display:none">
@@ -60,7 +61,19 @@ button:hover{background:#1a5be0;}
     <input type="hidden" name="_subject" value="New order request">
 
     <button type="submit">Send request</button>
+    
 </form>
+<script>
+const params = new URLSearchParams(window.location.search);
+const product = params.get('product');
+
+let amount="";
+if(product==="extended20") amount="45€";
+if(product==="extended40") amount="75€";
+
+document.getElementById("nextPage").value =
+"/pay.html?product="+product+"&amount="+amount;
+</script>
 
 </div>
 <script>
