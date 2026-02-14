@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <link rel="icon" type="image/png" href="/FAV.png">
@@ -24,7 +25,7 @@ background:var(--light);
 color:var(--text);
 }
 
-/* HERO HEADER */
+/* HERO */
 
 .hero{
 background:linear-gradient(180deg,#0e2a47 0%,#13395f 100%);
@@ -42,7 +43,6 @@ margin-bottom:18px;
 margin:10px 0 8px;
 font-size:30px;
 font-weight:600;
-letter-spacing:0.4px;
 }
 
 .hero p{
@@ -51,15 +51,37 @@ color:#c7d4e5;
 font-size:16px;
 }
 
-/* CONTENT */
+/* EXPLAIN */
+
+.explain{
+background:white;
+padding:45px 20px;
+}
+
+.explain-box{
+max-width:780px;
+margin:auto;
+text-align:center;
+}
+
+.explain h2{
+color:var(--main);
+margin-bottom:12px;
+}
+
+.explain p{
+color:var(--muted);
+line-height:1.7;
+margin:10px 0;
+}
+
+/* OPTIONS */
 
 .container{
 max-width:1050px;
 margin:auto;
 padding:50px 20px 40px;
 }
-
-/* CARDS */
 
 .cards{
 display:grid;
@@ -101,7 +123,6 @@ border-radius:8px;
 cursor:pointer;
 font-size:15px;
 font-weight:600;
-letter-spacing:0.3px;
 transition:0.2s;
 }
 
@@ -109,7 +130,7 @@ button:hover{
 background:var(--accent-dark);
 }
 
-/* INFO BLOCK */
+/* HOW */
 
 .info{
 margin-top:55px;
@@ -158,10 +179,23 @@ text-decoration:underline;
 <body>
 
 <header class="hero">
-    <img src="/header.png" class="hero-logo">
-    <h1>Private Support Service</h1>
-    <p>Confidential assistance and individual solutions within EU</p>
+<img src="/header.png" class="hero-logo">
+<h1>Private Support Service</h1>
+<p>Confidential assistance and individual solutions within EU</p>
 </header>
+
+<section class="explain">
+<div class="explain-box">
+<h2>Private and discreet assistance</h2>
+<p>
+This service is intended for confidential individual requests.
+No registration required and no personal data stored.
+</p>
+<p>
+Choose a suitable option → receive instructions → confirm → processing starts.
+</p>
+</div>
+</section>
 
 <div class="container">
 
@@ -207,5 +241,3 @@ Private service within EU<br><br>
 
 </body>
 </html>
-
-
