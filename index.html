@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <link rel="icon" type="image/png" href="/FAV.png">
@@ -25,18 +24,32 @@ background:var(--light);
 color:var(--text);
 }
 
-/* HEADER */
+/* HERO HEADER */
 
-<header class="topbar">
-  <div class="topwrap">
-      <img src="/header.png" class="logo">
-      <div class="titleblock">
-        <div class="sitename">Baltic Service</div>
-        <div class="subtitle">Private support service</div>
-      </div>
-  </div>
-</header>
+.hero{
+background:linear-gradient(180deg,#0e2a47 0%,#13395f 100%);
+text-align:center;
+padding:55px 20px 60px;
+color:white;
+}
 
+.hero-logo{
+height:140px;
+margin-bottom:18px;
+}
+
+.hero h1{
+margin:10px 0 8px;
+font-size:30px;
+font-weight:600;
+letter-spacing:0.4px;
+}
+
+.hero p{
+margin:0;
+color:#c7d4e5;
+font-size:16px;
+}
 
 /* CONTENT */
 
@@ -44,23 +57,6 @@ color:var(--text);
 max-width:1050px;
 margin:auto;
 padding:50px 20px 40px;
-}
-
-.intro{
-text-align:center;
-margin-bottom:40px;
-}
-
-.intro h1{
-font-size:28px;
-margin-bottom:10px;
-font-weight:600;
-color:var(--main);
-}
-
-.intro p{
-color:var(--muted);
-font-size:16px;
 }
 
 /* CARDS */
@@ -94,10 +90,6 @@ color:var(--main);
 .card p{
 color:var(--muted);
 margin-bottom:18px;
-}
-
-.card a{
-text-decoration:none;
 }
 
 button{
@@ -157,39 +149,6 @@ margin:0 6px;
 footer a:hover{
 text-decoration:underline;
 }
-/* HEADER FIX */
-
-.topbar{
-background:#0e2a47;
-padding:14px 20px;
-box-shadow:0 3px 14px rgba(0,0,0,0.15);
-}
-
-.topwrap{
-max-width:1100px;
-margin:auto;
-display:flex;
-align-items:center;
-gap:18px;
-}
-
-.logo{
-height:64px;
-}
-
-.sitename{
-color:white;
-font-size:22px;
-font-weight:600;
-letter-spacing:0.4px;
-}
-
-.subtitle{
-color:#9fb3c8;
-font-size:13px;
-margin-top:2px;
-}
-
 </style>
 
 <script defer src="https://cloud.umami.is/script.js" data-website-id="471139f4-c7d3-4e96-844c-73fcc4b5fefc"></script>
@@ -198,16 +157,13 @@ margin-top:2px;
 
 <body>
 
-<header class="topbar">
-<img src="/header.png" class="logo">
+<header class="hero">
+    <img src="/header.png" class="hero-logo">
+    <h1>Private Support Service</h1>
+    <p>Confidential assistance and individual solutions within EU</p>
 </header>
 
 <div class="container">
-
-<div class="intro">
-<h1>Private Support Service</h1>
-<p>Confidential assistance and individual solutions within EU</p>
-</div>
 
 <div class="cards">
 
@@ -251,4 +207,5 @@ Private service within EU<br><br>
 
 </body>
 </html>
+
 
