@@ -1,91 +1,185 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <link rel="icon" type="image/png" href="/FAV.png">
 <meta charset="UTF-8">
-<title>Private Men Health Service</title>
+<title>Baltic Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f4f6f8;
-    color:#2a2a2a;
+:root{
+--main:#0e2a47;
+--accent:#27c36f;
+--accent-dark:#1ea85d;
+--light:#f4f7fb;
+--card:#ffffff;
+--text:#1f2937;
+--muted:#6b7280;
 }
 
-header{
-    background:#1f2a44;
-    color:white;
-    padding:60px 20px;
-    text-align:center;
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:var(--light);
+color:var(--text);
 }
-header h1{margin:0;font-size:32px;}
-header p{margin-top:10px;color:#cfd6e6;}
+
+/* HEADER */
+
+.topbar{
+background:#ffffff;
+padding:16px 20px;
+box-shadow:0 2px 12px rgba(0,0,0,0.06);
+text-align:center;
+}
+
+.logo{
+height:72px;
+max-width:92%;
+}
+
+/* CONTENT */
 
 .container{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
+max-width:1050px;
+margin:auto;
+padding:50px 20px 40px;
 }
 
+.intro{
+text-align:center;
+margin-bottom:40px;
+}
+
+.intro h1{
+font-size:28px;
+margin-bottom:10px;
+font-weight:600;
+color:var(--main);
+}
+
+.intro p{
+color:var(--muted);
+font-size:16px;
+}
+
+/* CARDS */
+
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.1);
-    text-align:center;
+background:var(--card);
+padding:28px 26px;
+border-radius:14px;
+box-shadow:0 10px 22px rgba(0,0,0,0.08);
+text-align:center;
+transition:0.25s;
 }
 
-.card h2{margin-top:0;}
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 30px rgba(0,0,0,0.12);
+}
+
+.card h2{
+margin:0 0 8px;
+font-size:20px;
+color:var(--main);
+}
+
+.card p{
+color:var(--muted);
+margin-bottom:18px;
+}
 
 .card a{
-    text-decoration:none;
+text-decoration:none;
 }
 
 button{
-    margin-top:15px;
-    background:#2d72ff;
-    color:white;
-    border:none;
-    padding:14px 22px;
-    border-radius:6px;
-    cursor:pointer;
-    font-size:16px;
+background:var(--accent);
+color:white;
+border:none;
+padding:14px 22px;
+border-radius:8px;
+cursor:pointer;
+font-size:15px;
+font-weight:600;
+letter-spacing:0.3px;
+transition:0.2s;
 }
-button:hover{background:#1a5be0;}
+
+button:hover{
+background:var(--accent-dark);
+}
+
+/* INFO BLOCK */
 
 .info{
-    margin-top:50px;
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+margin-top:55px;
+background:white;
+padding:28px;
+border-radius:14px;
+box-shadow:0 10px 22px rgba(0,0,0,0.08);
+text-align:center;
 }
 
-footer{
-    text-align:center;
-    color:#777;
-    padding:30px 0;
-    font-size:14px;
+.info h3{
+margin-top:0;
+color:var(--main);
 }
+
+.steps{
+margin-top:12px;
+color:var(--muted);
+line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+color:#6b7280;
+padding:40px 0;
+font-size:14px;
+}
+
+footer a{
+color:#6b7280;
+text-decoration:none;
+margin:0 6px;
+}
+
+footer a:hover{
+text-decoration:underline;
+}
+
 </style>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="471139f4-c7d3-4e96-844c-73fcc4b5fefc"></script>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="471139f4-c7d3-4e96-844c-73fcc4b5fefc"></script>
+
 </head>
+
 <body>
+
 <header class="topbar">
-  <div class="brand">
-    <img src="/header.png" class="logo">
-  </div>
+<img src="/header.png" class="logo">
 </header>
+
 <div class="container">
+
+<div class="intro">
+<h1>Private Support Service</h1>
+<p>Confidential assistance and individual solutions within EU</p>
+</div>
+
 <div class="cards">
+
 <div class="card">
 <h2>Standard option</h2>
 <p>Occasional support</p>
@@ -108,11 +202,11 @@ footer{
 
 <div class="info">
 <h3>How it works</h3>
-<p>
+<div class="steps">
 1. Choose suitable option<br>
 2. Receive payment details<br>
 3. Processing & dispatch
-</p>
+</div>
 </div>
 
 </div>
@@ -124,6 +218,6 @@ Private service within EU<br><br>
 <a href="refund.html">Refund</a>
 </footer>
 
-
 </body>
 </html>
+
